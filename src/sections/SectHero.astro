@@ -1,0 +1,39 @@
+---
+import { getImage } from "astro:assets";
+import bg from "../assets/img/apex-legends-pathfinder-robot-emoticons-saluting-futuristic.jpg";
+import Button from "../components/Button.astro";
+
+const optBg = await getImage({
+  src: bg,
+  format: "webp",
+});
+---
+
+<section style={`background-image: url(${optBg.src});`}>
+  <h1>Киберспортивный<br /> клан RobotBot</h1>
+  <p>Играем и выигрываем</p>
+  <Button>Записаться в клан</Button>
+</section>
+
+<style>
+  section {
+    padding: 5rem 1rem;
+    background-size: cover;
+    background-position: right;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    color: #4e4e4e;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #4e4e4e;
+    margin-bottom: 2rem;
+  }
+</style>

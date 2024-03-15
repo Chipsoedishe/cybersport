@@ -1,0 +1,24 @@
+---
+import SiteLogo from "./SiteLogo.astro";
+import SiteNav from "./SiteNav.astro";
+---
+
+<header>
+  <div class="container">
+    <SiteLogo />
+    <SiteNav />
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: #222222;
+    padding-block: 1rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

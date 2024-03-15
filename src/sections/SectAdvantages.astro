@@ -1,0 +1,58 @@
+---
+import friendlySvg from "../assets/img/icons/friendly.svg";
+import joysticSvg from "../assets/img/icons/joystic.svg";
+import twitchSvg from "../assets/img/icons/twitch.svg";
+import scopeSvg from "../assets/img/icons/scope.svg";
+import { Image } from "astro:assets";
+---
+
+<section>
+  <div class="container">
+    <div class="card-block">
+      <div class="card">
+        <Image src={scopeSvg} alt="scope" />
+        <p>Регулярные турниры и тренировки</p>
+      </div>
+      <div class="card">
+        <Image src={friendlySvg} alt="friendly" />
+        <p>Дружелюбное комьюнити</p>
+      </div>
+      <div class="card">
+        <Image src={joysticSvg} alt="joystic" />
+        <p>Популярные дисциплины</p>
+      </div>
+      <div class="card">
+        <Image src={twitchSvg} alt="twitch" />
+        <p>Бесплатное обородувание для стримов</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: 5rem 2.5rem;
+  }
+
+  .card-block {
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    color: var(--c-title);
+    text-align: center;
+    & img {
+      margin: auto;
+      margin-bottom: 1rem;
+      height: 100px;
+      width: auto;
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+</style>
