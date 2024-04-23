@@ -1,0 +1,173 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<section>
+  <div class="container">
+    <div class="inner shadow">
+      <div class="header">
+        <button>{"<"}</button>
+        <h2>Заявка на вступление</h2>
+      </div>
+      <form action="">
+        <fieldset class="nickname">
+          <legend>Ваш никнейм в реальной жизни:)</legend>
+          <input type="text" name="name" placeholder="Имя" />
+          <input type="text" name="surname" placeholder="Фамилия" />
+        </fieldset>
+        <fieldset class="gender">
+          <legend>Ваш пол</legend>
+          <label>
+            <input type="radio" name="gender" value="male" />M
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" />W
+          </label>
+        </fieldset>
+        <label class="adult">
+          <input type="checkbox" name="adult" />
+          Мне есть 18
+        </label>
+        <label class="discipline">
+          Ваша дисциплина
+          <select name="discipline">
+            <option value="CS">CS:GO</option>
+            <option value="Apex">Apex Legends</option>
+            <option value="Dota">Dota 2</option>
+          </select>
+        </label>
+        <textarea placeholder="Дополнительная информация" name="info" rows="5"
+        ></textarea>
+        <div class="button-block">
+          <Button>Отправить заявку</Button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    margin-top: 50px;
+  }
+
+  .header {
+    display: flex;
+
+    background: linear-gradient(270deg, #65d9fe, #9ce7ff);
+    background-size: 400% 400%;
+
+    animation: Headergradient 30s ease infinite;
+
+    & h2 {
+      flex-grow: 1;
+      text-align: center;
+      color: #fff;
+      line-height: 3;
+      font-size: 18px;
+    }
+
+    & button {
+      width: 54px;
+      background: white;
+      border: none;
+      font-weight: bold;
+    }
+  }
+
+  form {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    padding: 20px 32px 54px;
+    color: #fff;
+
+    :global (.button) {
+      align-self: center;
+    }
+  }
+
+  fieldset {
+    padding: 20px;
+  }
+  .nickname {
+    display: flex;
+    flex-direction: column;
+
+    & input {
+      line-height: 3;
+      padding-inline: 1em;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: thin solid #ffffff83;
+      transition: border-color 0.3s;
+
+      &:focus-visible {
+        border-color: #fff;
+      }
+    }
+  }
+
+  .gender {
+    all: unset;
+
+    & legend {
+      margin-bottom: 0.7em;
+    }
+
+    & label {
+      margin-right: 1em;
+    }
+
+    & input {
+      margin-right: 0.5em;
+    }
+  }
+
+  .adult {
+    & input {
+      margin-right: 0.2em;
+    }
+  }
+
+  .discipline {
+    & select {
+      border-radius: 5px;
+      height: 2em;
+      outline: none;
+      margin-left: 0.5em;
+    }
+  }
+
+  textarea {
+    padding: 1em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: thin solid #ffffff83;
+    transition: border-color 0.3s;
+    resize: none;
+
+    &:focus-visible {
+      border-color: #fff;
+    }
+  }
+
+  .button-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes Headergradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

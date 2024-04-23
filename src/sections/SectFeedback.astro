@@ -8,10 +8,10 @@
     <div class="inner shadow">
       <h3>Го к нам</h3>
       <hr />
-      <button>
-        <span class="text">Кликай тут</span>
-        <span class="btn">Записаться</span>
-      </button>
+      <div class="click-block">
+        <p class="text">Кликай тут</p>
+        <a href="/registration"><button class="btn">Записаться</button></a>
+      </div>
     </div>
   </div>
 </section>
@@ -41,7 +41,7 @@
     margin: 1.5rem auto;
   }
 
-  button {
+  .click-block {
     background-color: var(--c-title);
     padding: 2.5rem 4rem;
     display: flex;
@@ -49,6 +49,10 @@
     align-items: center;
     border: none;
     width: 100%;
+
+    & a {
+      display: contents;
+    }
 
     & .text {
       font-size: 1.5rem;
@@ -62,6 +66,7 @@
       color: white;
       line-height: 2.5;
       padding-inline: 1rem;
+      cursor: pointer;
     }
   }
 </style>
