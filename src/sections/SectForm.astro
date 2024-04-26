@@ -9,28 +9,28 @@ import Button from "../components/Button.astro";
         <button>{"<"}</button>
         <h2>Заявка на вступление</h2>
       </div>
-      <form action="">
+      <form name="Заявки на вступление" netlify>
         <fieldset class="nickname">
           <legend>Ваш никнейм в реальной жизни:)</legend>
-          <input type="text" name="name" placeholder="Имя" />
-          <input type="text" name="surname" placeholder="Фамилия" />
+          <input type="text" name="name" placeholder="Имя" required />
+          <input type="text" name="surname" placeholder="Фамилия" required />
         </fieldset>
         <fieldset class="gender">
           <legend>Ваш пол</legend>
           <label>
-            <input type="radio" name="gender" value="male" />M
+            <input type="radio" name="gender" value="male" required />M
           </label>
           <label>
-            <input type="radio" name="gender" value="female" />W
+            <input type="radio" name="gender" value="female" required />W
           </label>
         </fieldset>
         <label class="adult">
-          <input type="checkbox" name="adult" />
+          <input type="checkbox" name="adult" required />
           Мне есть 18
         </label>
         <label class="discipline">
           Ваша дисциплина
-          <select name="discipline">
+          <select name="discipline" required>
             <option value="CS">CS:GO</option>
             <option value="Apex">Apex Legends</option>
             <option value="Dota">Dota 2</option>
