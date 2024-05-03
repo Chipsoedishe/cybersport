@@ -1,0 +1,25 @@
+---
+import SiteNav from "./SiteNav.astro";
+---
+
+<div id="mobile-menu">
+  <SiteNav />
+</div>
+
+<style>
+  #mobile-menu {
+    position: fixed;
+    inset: 0;
+    top: 64px;
+    background-color: #000000ad;
+    padding: 1rem;
+    translate: 100% 0;
+    transition: 0.5s;
+    &.active {
+      translate: 0;
+    }
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+</style>

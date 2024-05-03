@@ -38,6 +38,11 @@ import { Image } from "astro:assets";
     display: flex;
     gap: 2rem;
     padding: 0 1rem;
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
   }
 
   .card {

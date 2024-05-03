@@ -12,28 +12,44 @@ const optBg = await getImage({
 <section style={`background-image: url(${optBg.src});`}>
   <h1>Киберспортивный<br /> клан RobotBot</h1>
   <p>Играем и выигрываем</p>
-  <Button>Записаться в клан</Button>
+  <a href="/registration"><Button>Записаться в клан</Button></a>
 </section>
 
 <style>
   section {
     padding: 5rem 1rem;
     background-size: cover;
-    background-position: right;
+    background-position: center;
+
+    @media (min-width: 768px) {
+      background-position: right;
+    }
   }
 
   h1 {
-    font-size: 4.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     color: #4e4e4e;
     font-weight: 900;
     line-height: 1.2;
+
+    @media (min-width: 768px) {
+      font-size: 4.5rem;
+    }
   }
 
   p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #4e4e4e;
     margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  a {
+    display: contents;
   }
 </style>

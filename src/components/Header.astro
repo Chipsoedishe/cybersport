@@ -1,4 +1,5 @@
 ---
+import MenuToggler from "./MenuToggler.astro";
 import SiteLogo from "./SiteLogo.astro";
 import SiteNav from "./SiteNav.astro";
 ---
@@ -6,8 +7,8 @@ import SiteNav from "./SiteNav.astro";
 <header>
   <div class="container">
     <SiteLogo />
-    
-    <SiteNav />
+    <div class="nav-wrap"><SiteNav /></div>
+    <MenuToggler />
   </div>
 </header>
 
@@ -21,5 +22,12 @@ import SiteNav from "./SiteNav.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .nav-wrap {
+    display: none;
+    @media (min-width: 768px) {
+      display: contents;
+    }
   }
 </style>

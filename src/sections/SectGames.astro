@@ -11,6 +11,9 @@ import apexImage from "../assets/img/apex.jpg";
       <h2>Во что мы играем?</h2>
       <div class="cards-block">
         <div class="card">
+          <div class="img-block">
+            <Image src={csgoImage} alt="csgo" />
+          </div>
           <div class="text-block">
             <h3>CS:GO</h3>
             <hr />
@@ -21,11 +24,11 @@ import apexImage from "../assets/img/apex.jpg";
               enim neque nostrum eius eligendi?
             </p>
           </div>
-          <div class="img-block">
-            <Image src={csgoImage} alt="csgo" />
-          </div>
         </div>
         <div class="card">
+          <div class="img-block">
+            <Image src={dotaImage} alt="csgo" />
+          </div>
           <div class="text-block">
             <h3>Dota2</h3>
             <hr />
@@ -36,11 +39,11 @@ import apexImage from "../assets/img/apex.jpg";
               enim neque nostrum eius eligendi?
             </p>
           </div>
-          <div class="img-block">
-            <Image src={dotaImage} alt="csgo" />
-          </div>
         </div>
         <div class="card">
+          <div class="img-block">
+            <Image src={apexImage} alt="csgo" />
+          </div>
           <div class="text-block">
             <h3>Apex Legends</h3>
             <hr />
@@ -50,9 +53,6 @@ import apexImage from "../assets/img/apex.jpg";
               eligendi! Quod sequi adipisci similique consequuntur tenetur nihil
               enim neque nostrum eius eligendi?
             </p>
-          </div>
-          <div class="img-block">
-            <Image src={apexImage} alt="csgo" />
           </div>
         </div>
       </div>
@@ -76,10 +76,12 @@ import apexImage from "../assets/img/apex.jpg";
   }
 
   .card {
-    display: flex;
-    &:nth-child(2n) {
-      & .img-block {
-        order: -1;
+    @media (min-width: 768px) {
+      display: flex;
+      &:nth-child(2n) {
+        & .text-block {
+          order: -1;
+        }
       }
     }
   }

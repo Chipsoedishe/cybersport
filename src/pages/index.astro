@@ -5,6 +5,7 @@ import SectHero from "../sections/SectHero.astro";
 import SectAdvantages from "../sections/SectAdvantages.astro";
 import SectGames from "../sections/SectGames.astro";
 import SectFeedback from "../sections/SectFeedback.astro";
+import MobileMenu from "../components/MobileMenu.astro";
 ---
 
 <html lang="en">
@@ -13,7 +14,7 @@ import SectFeedback from "../sections/SectFeedback.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>RobotBot</title>
   </head>
   <body>
     <Header />
@@ -34,6 +35,7 @@ import SectFeedback from "../sections/SectFeedback.astro";
       </section>
       <SectFeedback />
     </main>
+    <MobileMenu />
   </body>
 </html>
 

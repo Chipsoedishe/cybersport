@@ -1,0 +1,54 @@
+---
+import SvgClose from "./SvgClose.astro";
+import SvgMenu from "./SvgMenu.astro";
+---
+
+<button id="menu-toggler">
+  <span class="close"><SvgClose /></span>
+  <span class="menu"><SvgMenu /></span>
+</button>
+
+<script>
+  const menuToggler = document.querySelector(
+    "#menu-toggler"
+  ) as HTMLButtonElement;
+  const mobileMenu = document.querySelector("#mobile-menu");
+
+  menuToggler.onclick = function () {
+    mobileMenu.classList.toggle("active");
+    menuToggler.classList.toggle("active");
+  };
+</script>
+
+<style>
+  button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    &.active {
+      & .close {
+        display: contents;
+      }
+
+      & .menu {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .close {
+    display: none;
+  }
+
+  span {
+    display: contents;
+  }
+</style>
